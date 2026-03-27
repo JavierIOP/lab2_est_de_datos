@@ -68,3 +68,18 @@ list.c:84:11: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
       |           ^~~~~~~~~
 cc1: all warnings being treated as errors
 5ac7570
+Fri Mar 27 06:01:44 PM UTC 2026: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:39:33: error: expected expression before ‘List’
+   39 |     nuevaLista = (List*) malloc(List);
+      |                                 ^~~~
+list.c: In function ‘pushCurrent’:
+list.c:85:11: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
+   85 |     Node* nuevoNodo = createNode(data);
+      |           ^~~~~~~~~
+cc1: all warnings being treated as errors
+4880cab

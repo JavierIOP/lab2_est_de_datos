@@ -54,7 +54,6 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    list
     return NULL;
 }
 

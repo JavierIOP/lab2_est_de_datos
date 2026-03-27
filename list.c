@@ -48,13 +48,9 @@ List * createList() {
 //   - La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
 
 void * firstList(List * list) {
-    list->current = list->head;
-    return list->head->data;
 }
 
 void * nextList(List * list) {
-    list->current = list->current->next;
-    return list->current->data;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).
@@ -83,6 +79,12 @@ void pushBack(List * list, void * data) {
 // 5. Programe la función void pushCurrent(List * list, void* data), la cual agrega un dato a continuación del nodo apuntado por list->current.
 
 void pushCurrent(List * list, void * data) {
+    newNode = createNode(data);
+    newNode->next = list->current->next;
+    list->current->next = newNode;
+    newNode->next->prev = newNode;
+    newNode->prev = list->current;
+    list->tail++;
 }
 
 void * popFront(List * list) {

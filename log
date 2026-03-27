@@ -238,3 +238,8 @@ list.c:52:39: error: ‘Node’ has no member named ‘key’
    52 |     if(list->head)return(list->current->key);
       |                                       ^~
 1b4da66
+Fri Mar 27 06:28:56 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+dd73bf6

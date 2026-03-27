@@ -49,7 +49,7 @@ List * createList() {
 
 void * firstList(List * list) {
     list->current=list->head;
-    if(list->head)eturn(list->current->key);
+    if(list->head)return(list->current->key);
     return NULL;
 }
 

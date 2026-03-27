@@ -228,3 +228,13 @@ list.c:52:38: error: ‘Node’ has no member named ‘key’
    52 |     if(list->head)eturn(list->current->key);
       |                                      ^~
 a840711
+Fri Mar 27 06:28:43 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:52:39: error: ‘Node’ has no member named ‘key’
+   52 |     if(list->head)return(list->current->key);
+      |                                       ^~
+1b4da66

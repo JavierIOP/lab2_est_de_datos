@@ -38,3 +38,18 @@ Fri Mar 27 05:55:46 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 54b27d8
+Fri Mar 27 06:00:36 PM UTC 2026: 
+ list.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:39:18: error: expected expression before ‘List’
+   39 |     nuevaLista = List* malloc(List);
+      |                  ^~~~
+list.c: In function ‘pushCurrent’:
+list.c:85:11: error: unused variable ‘nuevoNodo’ [-Werror=unused-variable]
+   85 |     Node* nuevoNodo = createNode(data);
+      |           ^~~~~~~~~
+cc1: all warnings being treated as errors
+8e01464

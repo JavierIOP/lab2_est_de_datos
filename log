@@ -215,3 +215,16 @@ Fri Mar 27 06:26:49 PM UTC 2026:
  1 file changed, 3 insertions(+), 1 deletion(-)
  tests:  0|0
 865cdc1
+Fri Mar 27 06:28:29 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:52:19: error: implicit declaration of function ‘eturn’ [-Wimplicit-function-declaration]
+   52 |     if(list->head)eturn(list->current->key);
+      |                   ^~~~~
+list.c:52:38: error: ‘Node’ has no member named ‘key’
+   52 |     if(list->head)eturn(list->current->key);
+      |                                      ^~
+a840711

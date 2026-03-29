@@ -412,3 +412,14 @@ Sun Mar 29 11:33:16 PM UTC 2026:
  tests:  11|1
 total_score: 50/60
 389c154
+Sun Mar 29 11:53:13 PM UTC 2026: 
+ list.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:126:14: error: ‘List’ {aka ‘struct List’} has no member named ‘heat’; did you mean ‘head’?
+  126 |     if(list->heat==borrar){
+      |              ^~~~
+      |              head
+956d82c

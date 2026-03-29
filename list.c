@@ -65,7 +65,7 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
     firstList(list);
-    while(!list->current->next)list->current=list->current->next;
+    while(list->current->next)list->current=list->current->next;
     return(list->current->data);
 }
 

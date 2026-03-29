@@ -127,6 +127,7 @@ void * popCurrent(List * list) {
         list->head=borrar->next;
         if(list->tail==borrar)list->tail=NULL;
             list->current=borrar->next;
+        list->head->prev=NULL;
     }
     else{
         Node* aux=list->head;

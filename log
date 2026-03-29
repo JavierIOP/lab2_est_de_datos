@@ -389,3 +389,8 @@ list.c:82:27: error: expected expression before ‘void’
    82 |     Node* nodo=createNode(void* data);
       |                           ^~~~
 6f7bb0e
+Sun Mar 29 11:10:07 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+a653ba8

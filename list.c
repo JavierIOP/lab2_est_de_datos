@@ -123,7 +123,7 @@ void * popCurrent(List * list) {
     if((!list)||(list->current))return NULL;
     void* data=list->current->data;
     Node* borrar=list->current;
-    if(list->heat==borrar){
+    if(list->head==borrar){
         list->head=borrar->next;
         if(list->tail==borrar)list->tail=NULL;
             list->current=borrar->next;

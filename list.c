@@ -123,21 +123,25 @@ void * popCurrent(List * list) {
     if((!list)||(!list->current))return NULL;
     void* data=list->current->data;
     Node* borrar=list->current;
-    if(list->head==borrar){
+    if((list->head==borrar)&&(list->tail==borrar)){
+        list->tail=NULL;
+        list->current=NULL;
+        list->head=NULL;
+    }
+    else if(list->head==borrar){
         list->head=borrar->next;
-        if(list->tail==borrar)list->tail=NULL;
-            list->current=borrar->next;
         list->head->prev=NULL;
+        list->current=list->head;
+    }
+    else if(list->tail==borrar){
+        list->tail=borrar->prev;
+        list->tail->next=NULL;
+        list->current=NULL;
     }
     else{
-        Node* aux=list->head;
-        while(aux->next!=borrar)aux=aux->next;
-        aux->next=borrar->next;
-        if(borrar==list->tail){
-            list->tail=aux;
-            list->current=NULL;
-        }
-        else list->current=borrar->next;
+        borrar->prev->next=borrar->next;
+        borrar->next->prev=borrar->prev;
+        list->current=borrar->next;
     }
     free(borrar);
     return data;
